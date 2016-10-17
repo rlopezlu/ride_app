@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h3 Rides
+  //-
+    ul
+      each ride, i in myPosts
+        li#ride_list_item
+          p #{ride.name} departs from #{ride.departing}, at #{ride.time}. Contact at #{ride.email} for more information
+        br
+  table(style="width:100%")
+    tr
+      th Name
+      th Departing
+      th Arriving
+      th Date
+      th Time
+      th Email
+      th options
+    each ride, o in myPosts
+      tr
+        td 
+          a(href="/api/users/"+ride.posterID) #{ride.person} 
+        td #{ride.departing}
+        td #{ride.arriving}
+        td #{ride.date}
+        //
+          - var d = new Date(ride.time);
+          - console.log(d);
+          - console.log(h);
+          - var h = d.getHours()
+        td #{ride.time}
+        td #{ride.email}
+        td
+          a.btn.btn-danger(href="/rides/"+ride._id) Edit Post

@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    //include form.html
+    block nav
+    h3= title
+    .container
+        .row    
+            form#form_add_trip(name="addtrip", method="post", action="/addtrip")
+                div(id="giveForm", class="col-md-6")
+                    div(class="form-group")
+                        label(for="person") Name
+                        input.form-control(type="text", name="person", value=user.fb.displayName, placeholder="Person" required)
+                    div(class="form-group")
+                        label(for="email") Email address
+                        input.form-control(type="email", name="email", value=user.fb.email, placeholder="Email" required)
+                    div.form-group
+                        label(for="price") Price $
+                        input.form-control(type="number", name="price" required)
+                    fieldset(class="form-group")
+                        label(for="exampleTextarea") Notes- pickup location, remarks, etc
+                        textarea(class="form-control", id="notes", name="notes", rows="3", placeholder="Notes (optional)")
+                div(id="giveForm", class="col-md-6")
+                    div(class="form-group")
+                        label(for="date") Pickup Date
+                        input(type="date", class="form-control", name="date", placeholder="Date" required)
+                    //div(class="form-group")
+                    //    label(for="time") Pickup Time
+                    //    input(type="time", class="form-control", name="time", placeholder="Time" required)
+                    div(class="form-group")
+                        label(for="departing") Departing City
+                        input(type="text", class="form-control", name="departing", placeholder="Departing" required)
+                    div(class="form-group")
+                        label(for="arriving") Destination City
+                        input(type="text", class="form-control", name="arriving", placeholder="Arriving" required)
+                    //div(class="form-group")
+                    //    label(for="returning") Return Date
+                    //    input(type="date", class="form-control", name="returning", placeholder="Return Date" required)
+                    div
+                        button(type="reset", class="btn btn-danger") Clear all
+                        br
+                        button(type="submit", class="btn btn-primary") Submit
+
+                    //a(class="btn btn-default", role="button", href="wantRide") Request a ride instead 

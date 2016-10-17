@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  p Are you sure you want to remove the following account?
+  div.container
+    div.row
+      div.col-sm-6.col-md-4.col-md-offset-4
+        #user
+          h1.text-center.login-title #{user.fb.firstName}, check your details below:
+            div.signup-wall
+              img(src=user.fb.photos)
+              ul.user-details
+                li Email    ---> #{user.fb.email}
+                li First Name ---> #{user.fb.firstName}
+                li Last Name ---> #{user.fb.lastName}
+                li Display Name ---> #{user.fb.displayName}
+                li ID ---> #{user.fb.id}
+                li Gender ---> #{user.fb.gender}
+                li
+                  a(href=user.fb.accUrl) Facebook
+            br
+            a(href="deleteUser" class="btn btn-danger") Delete User

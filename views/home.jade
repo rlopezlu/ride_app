@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  //h1= title
+  // p Welcome to #{title}
+
+  //img(src="/images/greenCar.jpg")
+  //
+    <div class="jumbotron">
+      <h1 class="display-3">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="m-y-2">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+  //</div>
+  div(class="jumbotron")
+    //img(src="/images/greenCar.jpg")
+    h1(class="display-3")= title
+    p(class="lead") Sharing rides has never been easier
+    //hr(class="m-y-2")
+    p(class="lead")
+      a(class="btn btn-primary btn-lg" href="about" role="button") Learn More
+
+  div(class="choose-link")
+    a(class="btn btn-default", href="giveRide") Offering a ride?
+    br
+    br
+    br
+    //a(class="btn btn-default", href="wantRide") Looking for a ride?

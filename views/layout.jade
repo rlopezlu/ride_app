@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title= title
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
+
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-social.css')
+    link(rel='stylesheet', href='/stylesheets/nav.css')
+    link(rel='stylesheet', href='/stylesheets/style2.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    //p this text
+    //block navv
+    //a(href="/") RideBuddy
+    //br
+    //a(href="giveRide") Give Ride?
+    //br
+    //a(href="wantRide") Want Ride?
+    div.nav
+      ul
+          li
+            a(href="/home") RideBuddy
+          li 
+            a(href="/about") About
+          li
+            a(href="/ridelist") All Rides
+          li
+            a(href="/myPosts") Your Rides
+          li
+            a(href="/account") Account
+        //li 
+        //  a this  
+    block content
