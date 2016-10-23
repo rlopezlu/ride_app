@@ -20,9 +20,9 @@ block content
     each ride, i in ridelist
       tr.tabRow
         td.tdata 
-          //img(src='https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/11037347_972429526101450_2983766558226951063_n.jpg?oh=ab80742059fdf52dbec66afb2658a72f&oe=57CF8CCC')
-          a(href=ride.user_ref.fb.accUrl)
-            img(src=ride.user_ref.fb.photos)
+          img(src='https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/11037347_972429526101450_2983766558226951063_n.jpg?oh=ab80742059fdf52dbec66afb2658a72f&oe=57CF8CCC')
+          a(href=ride.user_ref.accUrl) 
+            img(src=ride.user_ref.photos)
         td.tdata #{ride.person} 
         td.tdata #{ride.departing}
         td.tdata #{ride.arriving}

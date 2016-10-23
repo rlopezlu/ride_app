@@ -108,18 +108,20 @@ module.exports = function(passport){
 
 	router.get('/myPosts',  isAuthenticated, function(req, res){
 
-		Ride.find({posterID: req.user.id}, function(err, rides){
-    	if(err){
-	      console.log("could not find ride", err);
-	    } else if(rides.length){
-	    	console.log('conencted to mongo\nlisting my all rides');
-	    	console.log(rides);
-	      res.render("myPosts", 
-	      			{'myPosts': rides}
-	      );
-	    } else{
-	      res.send('no documents');
-	    }
+		Ride.find({email: req.user.fb.email}, function(err, rides){
+			console.log("my user id: ", req.user.id);
+			console.log("my email: ", req.user.fb.email);
+	    	if(err){
+		      console.log("could not find ride", err);
+		    } else if(rides.length){
+		    	console.log('conencted to mongo\nlisting my all rides');
+		    	console.log(rides);
+		      res.render("myPosts", 
+		      			{'myPosts': rides}
+		      );
+		    } else{
+		      res.send('no documents');
+		    }
 	  });
 	});
 
